@@ -20,7 +20,7 @@ class SendMail():
         msg['From'] = msg_from
         msg['To'] = ','.join(msg_to)
         msg.attach(MIMEText('接口自动化测试报告'))
-        att1 = MIMEApplication(open('C:/Users/lixh/testgit/test/res3.html', 'rb').read())
+        att1 = MIMEApplication(open('C:/Users/lixh/Desktop/res0.html', 'rb').read())
         att1.add_header(
                 'Content-Disposition',
                 'attachment', filename=('gbk', '', '测试报告.html'))
@@ -34,10 +34,10 @@ class SendMail():
             print("发送失败")
 
 if __name__ == '__main__':
-    test_dir = 'C:/Users/lixh/testgit/test'
+    test_dir = 'C:/Users/lixh/testgit'
     discover = unittest.defaultTestLoader.discover(test_dir,pattern='jdb*.py')#添加所有用例
     runner = unittest.TextTestRunner()
-    with open("C:/Users/lixh/testgit/test/res3.html",'wb') as fr:
+    with open("C:/Users/lixh/Desktop/res0.html",'wb') as fr:
         runner = HTMLTestRunner.HTMLTestRunner(stream=fr,title="接口测试报告",description="测试用例结果",tester=u"舒萌")
         # 生成执行用例的对象
         runner.run(discover)
