@@ -34,7 +34,7 @@ class SendMail():
             print("发送失败")
 
 if __name__ == '__main__':
-    test_dir = 'D:/test_jdb'
+    test_dir = 'C:/Users/lixh/testgit'
     discover = unittest.defaultTestLoader.discover(test_dir,pattern='jdb*.py')#添加所有用例
     runner = unittest.TextTestRunner()
     with open("C:/Users/lixh/Desktop/res0.html",'wb') as fr:
