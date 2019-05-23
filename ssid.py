@@ -1,7 +1,6 @@
 # Author :lixinhao
 
 def ssidx():
-    return '6b95196aa3d4a3dd'
+    return '3d3d7004bf1595b4'
 
-#if __name__ == '__main__':
-#    ssidx()
+
